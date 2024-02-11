@@ -1,2 +1,2 @@
 # BrowserNote
-Quick notes directly in browser
+Quick notes directly in browser.
