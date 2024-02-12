@@ -1,11 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "QuickNote",
+    "name": "__MSG_extensionName__",
+    "description": "__MSG_extensionDescription__",
     "version": "1.0",
-    "description": "Effortless and instant note-taking directly from your browser toolbar.",
     "permissions": [
         "storage"
     ],
+    "default_locale": "en",
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
