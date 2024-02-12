@@ -3,7 +3,8 @@ Quick notes directly in browser.
 
 ## Todo
 
-* Icon badge
-* Firefox support
 * Dark/Light theme
-* Manifest multilanguage
+* Firefox support
+* Modification date
+* Clear button
+* Resize save or settings
