@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Quick note",
   "scripts": {
-    "build": "parcel build js/popup.js js/background.js --dist-dir ./dist",
-    "watch": "parcel watch js/popup.js js/background.js --dist-dir ./dist"
+    "build": "parcel build src/js/popup.js src/js/background.js --dist-dir ./dist/js",
+    "watch": "parcel watch src/js/popup.js src/js/background.js --dist-dir ./dist/js"
   },
   "repository": {
     "type": "git",
