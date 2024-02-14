@@ -1,0 +1,16 @@
+{
+  "name": "browsernote",
+  "version": "1.0.0",
+  "description": "Quick note",
+  "scripts": {
+    "build": "parcel build js/popup.js js/background.js --dist-dir ./dist",
+    "watch": "parcel watch js/popup.js js/background.js --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pozdrawiam/BrowserNote.git"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}

@@ -21,6 +21,6 @@
         "128": "icons/note128.png"
     },
     "background": {
-        "service_worker": "js/background.js"
+        "service_worker": "dist/background.js"
     }
 }
