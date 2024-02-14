@@ -17,4 +17,5 @@ npm run build
 
 ## Todo
 
+* migrate to TypeScript
 * Firefox support
