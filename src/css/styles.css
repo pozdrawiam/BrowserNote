@@ -6,7 +6,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 2px;
     font-family: Arial, sans-serif;
 }
 
@@ -17,6 +17,11 @@ textarea {
     padding: 8px;
     box-sizing: border-box;
 }
+
+textarea:focus {
+    outline: 2px solid yellow;
+  }
+  
 
 body {
     background-color: var(--background-color-light);
