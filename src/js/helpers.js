@@ -1,3 +1,7 @@
+import BrowserApiFactory from './browser/BrowserApiFactory';
+
+const browserApi = BrowserApiFactory.create();
+
 export function loadBadge() {
     chrome.storage.local.get(['note'], function (result) {
         if (!result) {
@@ -16,5 +20,5 @@ export function updateBadge(note) {
     const nonEmptyLinesCount = note.split('\n').filter(line => line.trim() !== '').length;
     const badgeText = nonEmptyLinesCount > 0 ? nonEmptyLinesCount.toString() : '';
 
-    chrome.action.setBadgeText({ text: badgeText });
+    browserApi.setBadgeText(badgeText);
 }
