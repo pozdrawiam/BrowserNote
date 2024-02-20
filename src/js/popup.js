@@ -14,4 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateBadge(noteElement.value);
+
+    noteElement.focus();
 });
