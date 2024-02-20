@@ -4,6 +4,11 @@ Quick notes directly in browser.
 
 Current supports Chromium based browsers.
 
+## Features
+
+* note saves to browser memory
+* badge with not empty lines count
+
 ## Dependencies
 
 * node + npm
