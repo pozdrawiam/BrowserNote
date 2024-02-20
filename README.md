@@ -30,6 +30,6 @@ npm run build
 ## Todo
 
 * check note max lenth
-* focus on open at end
+* remember focus position
 * migrate to TypeScript for improve code safety and developer productiviry
 * Firefox support
