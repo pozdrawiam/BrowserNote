@@ -2,7 +2,9 @@
 
 Quick notes directly in browser.
 
-Current supports Chromium based browsers.
+BrowserNote is a lightweight and efficient browser extension designed for users who value productivity and convenience while surfing the internet. This tool enables you to quickly jot down notes and ideas directly within your browser with just a single click, eliminating the need to switch between applications or disrupt your browsing experience. Whether you're researching, reading, or encountering inspirational content, BrowserNote offers a seamless way to capture your thoughts, references, and to-do lists at the moment of inspiration.
+
+Currently supports Chromium-based browsers.
 
 ## Features
 
@@ -11,8 +13,13 @@ Current supports Chromium based browsers.
 
 ## Dependencies
 
-* node + npm
-* Parcel bundler
+* node + npm: used to manage the project's packages
+* Parcel bundler: for js build
+
+To install it run:
+```
+npm install
+```
 
 ## Build
 
