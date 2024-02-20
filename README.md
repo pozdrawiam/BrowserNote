@@ -22,5 +22,7 @@ npm run build
 
 ## Todo
 
-* migrate to TypeScript
+* check note max lenth
+* focus on open at end
+* migrate to TypeScript for improve code safety and developer productiviry
 * Firefox support
