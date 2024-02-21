@@ -5,15 +5,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     chrome.storage.local.get(['note'], function (result) {
         noteElement.value = result.note || '';
+
         updateBadge(result.note);
+    });
+
+    chrome.storage.session.get(['cursorPosition'], function (result) {
+        setCursorPosition(noteElement, result.cursorPosition || null);
     });
 
     noteElement.addEventListener('input', () => {
         chrome.storage.local.set({ note: noteElement.value });
+        chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
+
         updateBadge(noteElement.value);
     });
 
-    updateBadge(noteElement.value);
+    noteElement.addEventListener('keyup', () => {
+        chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
+    });
 
-    noteElement.focus();
+    noteElement.addEventListener('click', () => {
+        chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
+    });
+
+    updateBadge(noteElement.value);
 });
+
+function setCursorPosition(textareaElement, position) {
+    setTimeout(() => {
+        textareaElement.focus();
+
+        if (position != null) {
+            textareaElement.selectionStart = position;
+            textareaElement.selectionEnd = position;
+        }
+        
+    }, 50);
+}
