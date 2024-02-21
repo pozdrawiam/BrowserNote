@@ -10,6 +10,7 @@ Currently supports Chromium-based browsers.
 
 * note saves to browser memory
 * badge with not empty lines count
+* cursor saves to browser session
 
 ## Dependencies
 
