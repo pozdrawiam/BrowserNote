@@ -2,13 +2,13 @@ import { browserApi, setCursorPosition, updateBadge } from './helpers.js';
 
 const noteElement = document.getElementById('note');
 
-browserApi.getLocalStorageValue(['note'], function (result) {
+browserApi.getLocalStorageValue(['note'], result => {
     noteElement.value = result.note || '';
 
     updateBadge(result.note);
 
     if (result.note) {
-        browserApi.getSessionStorageValue(['cursorPosition'], function (result) {
+        browserApi.getSessionStorageValue(['cursorPosition'], result => {
             setCursorPosition(noteElement, result.cursorPosition || null);
         });
     }
