@@ -6,10 +6,12 @@ browserApi.getLocalStorageValue(['note'], function (result) {
     noteElement.value = result.note || '';
 
     updateBadge(result.note);
-});
 
-browserApi.getSessionStorageValue(['cursorPosition'], function (result) {
-    setCursorPosition(noteElement, result.cursorPosition || null);
+    if (result.note) {
+        browserApi.getSessionStorageValue(['cursorPosition'], function (result) {
+            setCursorPosition(noteElement, result.cursorPosition || null);
+        });
+    }
 });
 
 noteElement.addEventListener('input', () => {

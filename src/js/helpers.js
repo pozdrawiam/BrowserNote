@@ -13,15 +13,12 @@ export function loadBadge() {
 }
 
 export function setCursorPosition(textareaElement, position) {
-    setTimeout(() => {
-        textareaElement.focus();
+    textareaElement.focus();
 
-        if (position != null) {
-            textareaElement.selectionStart = position;
-            textareaElement.selectionEnd = position;
-        }
-
-    }, 50);
+    if (position != null) {
+        textareaElement.selectionStart = position;
+        textareaElement.selectionEnd = position;
+    }
 }
 
 export function updateBadge(note) {
