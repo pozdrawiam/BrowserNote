@@ -12,6 +12,18 @@ export function loadBadge() {
     });
 }
 
+export function setCursorPosition(textareaElement, position) {
+    setTimeout(() => {
+        textareaElement.focus();
+
+        if (position != null) {
+            textareaElement.selectionStart = position;
+            textareaElement.selectionEnd = position;
+        }
+
+    }, 50);
+}
+
 export function updateBadge(note) {
     if (!note) {
         return;

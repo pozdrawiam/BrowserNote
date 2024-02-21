@@ -1,44 +1,30 @@
-import { updateBadge } from './helpers.js';
+import { setCursorPosition, updateBadge } from './helpers.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const noteElement = document.getElementById('note');
+const noteElement = document.getElementById('note');
 
-    chrome.storage.local.get(['note'], function (result) {
-        noteElement.value = result.note || '';
+chrome.storage.local.get(['note'], function (result) {
+    noteElement.value = result.note || '';
 
-        updateBadge(result.note);
-    });
+    updateBadge(result.note);
+});
 
-    chrome.storage.session.get(['cursorPosition'], function (result) {
-        setCursorPosition(noteElement, result.cursorPosition || null);
-    });
+chrome.storage.session.get(['cursorPosition'], function (result) {
+    setCursorPosition(noteElement, result.cursorPosition || null);
+});
 
-    noteElement.addEventListener('input', () => {
-        chrome.storage.local.set({ note: noteElement.value });
-        chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
-
-        updateBadge(noteElement.value);
-    });
-
-    noteElement.addEventListener('keyup', () => {
-        chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
-    });
-
-    noteElement.addEventListener('click', () => {
-        chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
-    });
+noteElement.addEventListener('input', () => {
+    chrome.storage.local.set({ note: noteElement.value });
+    chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
 
     updateBadge(noteElement.value);
 });
 
-function setCursorPosition(textareaElement, position) {
-    setTimeout(() => {
-        textareaElement.focus();
+noteElement.addEventListener('keyup', () => {
+    chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
+});
 
-        if (position != null) {
-            textareaElement.selectionStart = position;
-            textareaElement.selectionEnd = position;
-        }
-        
-    }, 50);
-}
+noteElement.addEventListener('click', () => {
+    chrome.storage.session.set({ cursorPosition: noteElement.selectionEnd });
+});
+
+updateBadge(noteElement.value);
