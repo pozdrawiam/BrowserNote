@@ -1,6 +1,6 @@
 import BrowserApiFactory from './browser/BrowserApiFactory';
 
-const browserApi = BrowserApiFactory.create();
+export const browserApi = BrowserApiFactory.create();
 
 export function loadBadge() {
     chrome.storage.local.get(['note'], function (result) {
