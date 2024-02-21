@@ -19,12 +19,10 @@ noteElement.addEventListener('input', () => {
     updateBadge(noteElement.value);
 });
 
-noteElement.addEventListener('keyup', () => {
-    browserApi.setSessionStorageValue({ cursorPosition: noteElement.selectionEnd });
-});
-
-noteElement.addEventListener('click', () => {
-    browserApi.setSessionStorageValue({ cursorPosition: noteElement.selectionEnd });
+['click', 'keyup'].forEach(event => {
+    noteElement.addEventListener(event, () => {
+        browserApi.setSessionStorageValue({ cursorPosition: noteElement.selectionEnd });
+    });
 });
 
 updateBadge(noteElement.value);
