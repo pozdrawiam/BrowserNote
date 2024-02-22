@@ -30,6 +30,5 @@ npm run build
 
 ## Todo
 
-* check note max lenth
+* Firefox browser support
 * migrate to TypeScript for improve code safety and developer productiviry
-* Firefox support
