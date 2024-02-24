@@ -23,6 +23,7 @@ export function setCursorPosition(textareaElement, position) {
 
 export function updateBadge(note) {
     if (!note) {
+        browserApi.setBadgeText(null);
         return;
     }
 
