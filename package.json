@@ -4,6 +4,8 @@
   "description": "Quick note",
   "scripts": {
     "build": "parcel build src/js/popup.js src/js/background.js --dist-dir ./dist/js",
+    "build:chrome": "npm run build && shx cp manifest.chrome.json manifest.json",
+    "build:firefox": "npm run build && shx cp manifest.firefox.json manifest.json",
     "watch": "parcel watch src/js/popup.js src/js/background.js --dist-dir ./dist/js"
   },
   "repository": {
@@ -11,6 +13,7 @@
     "url": "git+https://github.com/pozdrawiam/BrowserNote.git"
   },
   "devDependencies": {
-    "parcel": "^2.11.0"
+    "parcel": "^2.11.0",
+    "shx": "^0.3.4"
   }
 }
