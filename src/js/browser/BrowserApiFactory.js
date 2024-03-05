@@ -6,7 +6,7 @@ export default class BrowserApiFactory {
         if (typeof chrome !== "undefined" && chrome.action) {
             return new ChromeBrowserApi();
         }
-        else if (typeof browser !== "undefined" && browser.action) {
+        else if (typeof browser !== "undefined" && browser.runtime) {
             return new FirefoxBrowserApi();
         }
         else {
