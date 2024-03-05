@@ -24,8 +24,13 @@ npm install
 
 ## Build
 
+Chrome:
 ```
-npm run build
+npm run build:chrome
+```
+Firefox:
+```
+npm run build:firefox
 ```
 
 ## Todo
