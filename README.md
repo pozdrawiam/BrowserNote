@@ -30,5 +30,4 @@ npm run build
 
 ## Todo
 
-* Firefox browser support
 * migrate to TypeScript for improve code safety and developer productiviry
