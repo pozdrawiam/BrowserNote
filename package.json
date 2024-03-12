@@ -1,6 +1,6 @@
 {
   "name": "browsernote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quick note",
   "scripts": {
     "build": "parcel build src/js/popup.js src/js/background.js --dist-dir ./dist/js",
